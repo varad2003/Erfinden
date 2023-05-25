@@ -12,7 +12,7 @@ public class Login extends AppCompatActivity {
 
 
     LinearLayout signup;
-    TextView signin;
+    TextView signin,forgot_password;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,6 +21,14 @@ public class Login extends AppCompatActivity {
 
         signup=findViewById(R.id.txt_signup);
         signin=findViewById(R.id.txt_signin);
+        forgot_password=findViewById(R.id.fogotpassword);
+
+        forgot_password.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(getApplicationContext(),ForgotPassword.class));
+            }
+        });
 
         signup.setOnClickListener(new View.OnClickListener() {
             @Override
